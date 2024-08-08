@@ -282,6 +282,24 @@
 .gallary .card img:hover{
     transform: scale(1.1);
 }
+#gallary-btn {
+    display: block; /* Makes the button a block-level element */
+    margin: 20px auto; /* Automatically adjusts left and right margins to center the button */
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #15b678;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#gallary-btn:hover{
+    width: 170px;
+}
 /* Section Gallary End */
 
 
@@ -363,30 +381,21 @@
     background: #15b678;
 }
 .map-container {
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    padding-left: 400px;
+    overflow: hidden;
+    padding-bottom: 56.25%; /*ratio is 16/9*/
+    position: relative;
+    height: 0;
   }
   
   .map-container iframe {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: 600px;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    border-radius: 5px;
   }
 
-  @media screen and (max-width: 500px) {
-    .map-container{
-        padding-left: 18.5%;
-    }
-    .map-container iframe{
-        width: 300px;
-        height: 300px;
-    }
-    
-  }
   
 /* Footer End */
